@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		
+	$(document).ready(function(){
+
+		$('#btn').click(function(){
+		var date = $("input[name=date]").val();	
+		var entry = $("textarea[name=blog]").val();
+		var html_entry = "<div id='alive'>"
+		html_entry += "<h1>Blog " + date + " </h1>";
+		html_entry += "<h4>" + entry + "</h4>" 
+		html_entry += "</div>" 
+
+		$('#entry').append(html_entry);
+
+
+
+
+		}) //'btn function'
+
+	}) //.ready
+	</script>
+	<style>
+	h1 {
+		color: white;
+		margin: 10px;
+	}
+	#alive {
+		color: white;
+	}
+	
+	body {
+		background-color: black
+	}
+		#submit {
+			width: auto;
+			height: auto;
+			display: inline-block;
+			vertical-align: top;
+		}
+		input{
+			display: block;
+			margin-bottom: 30px;
+		}
+		#btn {
+			display: block;
+			margin-top: 30px;
+		}
+		#entry {
+			width:400px;
+			height:auto;
+			display: inline-block;
+			margin-left: 60px;
+			margin-bottom: 30px;
+		}
+		#wrapper {
+			width:650px;
+			height: auto;
+			padding: 0px;
+			margin: 0px auto;
+		}
+		#alive {
+			width:400px;
+			height: 150px;
+			border: 1px solid white;
+			margin-bottom: 20px;
+			padding: 10px;
+			border-radius: 5px;
+			background-color: black;
+
+		}
+	</style>
+	<title>api fun</title>
+</head>
+<body>
+	<div id="wrapper">
+		<h1>BlogSmart</h1>
+		<div id="submit">
+			<input type="text" name="date" placeholder="month\day\year">
+			<textarea name="blog" placeholder="Blog entry"></textarea>
+			<button id="btn">Submit Entry</button>
+		</div>
+		<div id="entry">
+
+		</div>
+	</div>	
+
+</body>
+</html>
